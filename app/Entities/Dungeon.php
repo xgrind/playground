@@ -40,7 +40,7 @@ class Dungeon extends Entity
      * Use another model to get some random data.
      */
     public function monsters(int $limit = 5)
-    {
+    {       
         return model(MonsterModel::class)
             ->where('dungeon_id', $this->id)
             ->orderBy('health', 'asc')
